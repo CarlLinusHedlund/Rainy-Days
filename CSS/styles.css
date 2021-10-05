@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  background: #f3f3f3;
+  width: 1440px;
+  font-family: "Rubik", sans-serif;
+}
+
+header {
+  height: 144px;
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  width: 133px;
+  height: 71px;
+  margin-block: auto;
+}
+
+.navigation {
+  display: flex;
+  height: 112px;
+  background-color: white;
+  margin: 0px 143px 0px 143px;
+}
+
+.top-header {
+  margin: 0px;
+}
+
+.info {
+  background-color: black;
+}
+
+.info p {
+  height: 23px;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 1%;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: black;
+}
+
+.navbar {
+  margin-left: 150px;
+  margin-top: auto;
+  margin-block: auto;
+}
+
+.men {
+  margin-right: 25px;
+}
+
+.women {
+  margin-right: 25px;
+}
+
+.about {
+  margin-right: 25px;
+}
+
+.contact {
+  margin-right: 25px;
+}
+
+.search1 {
+  background-color: rgba(196, 196, 196, 0.1);
+  width: 227px;
+  height: 23px;
+  border: none;
+  display: inline-flex;
+  margin: 2px;
+}
+
+.search-box img {
+  margin: 3px;
+}
+
+.search-box {
+  margin-block: auto;
+  margin-left: 135px;
+  display: inline-flex;
+  background-color: rgba(196, 196, 196, 0.1);
+  width: 264px;
+  height: 30px;
+  border: solid 0.5px grey;
+  border-radius: 2px;
+}
+
+.cart {
+  right: 145px;
+  position: absolute;
+  top: 39px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.cart p {
+  margin: 0;
+}
+
+.account {
+  right: 200px;
+  position: absolute;
+  top: 39px;
+  text-align: center;
+  font-size: 11px;
+}
+.account p {
+  margin: 0px;
+}
+
+.acc-cart {
+  display: inline-flex;
+}
