@@ -1,113 +1,1280 @@
 body {
-  margin: 0;
-  background: #f3f3f3;
-  width: auto;
   font-family: "Rubik", sans-serif;
+  margin: 0;
+  width: 100%;
+  height: 1080px;
 }
 
-header {
-  height: 112px;
-  display: inline-flex;
+.desktop-header {
+  display: none;
 }
 
-.navigation {
-  display: inline-flex;
-  margin: 0px 143px 0px 143px;
+.header {
+  height: auto;
+  width: 100%;
+  background-color: white;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.mobile-navigation {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-}
-
-.navbar {
-  margin-left: 86px;
-}
-
-.navbar a {
-  margin-right: 25px;
-  text-decoration: none;
-  color: black;
-}
-
-.info {
-  background-color: black;
-  color: white;
-  text-align: center;
-  font-size: 11px;
-  height: 27px;
-  margin: 0px;
-  padding: 0px;
-  letter-spacing: 1%;
-}
-.info p {
-  padding: 6px;
-  margin: 0px;
-}
-
-main {
-  margin-top: 300px;
-}
-.searchbox img {
-  margin: 3px;
-}
-
-.searchbox {
-  margin-block: auto;
-  margin-left: 135px;
-  display: inline-flex;
-  background-color: rgba(196, 196, 196, 0.1);
-  width: 264px;
-  height: 30px;
-  border: solid 0.5px grey;
-  border-radius: 2px;
-}
-
-.search {
-  background-color: rgba(196, 196, 196, 0.1);
-  width: 227px;
-  height: 23px;
-  border: none;
-  display: inline-flex;
-  margin: 2px;
-}
-
-.account {
-  float: right;
-  margin-left: 20px;
-  align-items: center;
-}
-
-.account img {
-  margin-left: 8px;
-}
-
-.account p {
-  margin: 0px;
-  padding: 0px;
-  font-size: 11px;
-}
-.account a {
-  text-decoration: none;
-  color: black;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .cart {
+  cursor: pointer;
+}
+
+.fas {
+  font-size: 1.563em;
+  cursor: pointer;
+}
+
+.sr-only {
+  display: none;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.navbar {
+  /*hide nav on load*/
+  display: block;
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  /* animate: default state on page load */
+  transition: all 300ms linear;
+  transform: translateX(-1800px);
+  margin-bottom: -890px;
+  position: absolute;
+  border-radius: 0 10px 10px 0;
+  z-index: 1;
+}
+
+.navbar-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list-container {
+  margin-bottom: 2px;
+  background-color: #f3f3f3;
+}
+
+.navbar-list p {
+  display: inline-block;
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+.navbar-list i {
+  margin-top: 13px;
+  margin-right: 20px;
   float: right;
+  color: #202323;
+}
+
+.acc-search {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.account-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #202323;
+  width: 50%;
+  margin: 0;
+  margin-right: 2px;
+  color: #f3f3f3;
+  font-size: 15px;
+  text-transform: uppercase;
+  border: none;
+}
+.account-box img {
+  display: inline-block;
+  margin-right: 7px;
+  color: #f3f3f3;
+}
+.account-box p {
+  display: inline-block;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  color: #f3f3f3;
+  font-size: 15px;
+  text-transform: uppercase;
+  background-color: #202323;
+  border-radius: 0 0 0 0;
+  border: none;
+}
+.search-box img {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 900;
+  margin-right: 5px;
+  color: #f3f3f3;
+}
+.search-box p {
+  display: inline-block;
+}
+
+.navbar-footer {
+  background-color: #202323;
+  color: #f3f3f3;
+}
+
+.navbar-payments {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-bottom: 3px;
+}
+
+.navbar-payments h2 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 2px;
+  display: inline-block;
+}
+
+.navbar-socialmedia {
+  display: inline-block;
+  margin-left: 10px;
+  width: 50%;
+}
+
+.navbar-socialmedia h2 {
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.navbar-socialmedia img {
+  height: 20px;
+  width: 30px;
+}
+
+.navbar-newsletter {
+  position: relative;
+  bottom: 60px;
+  display: inline-block;
+  margin-left: 10px;
+  width: 50%;
+}
+
+.navbar-newsletter h2 {
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.navbar-newsletter p {
+  font-size: 0.8em;
+  margin-top: 0px;
+}
+
+.navbar-newsletter button {
+  background-color: #cc8316;
+  border: none;
+  width: 125px;
+  height: 25px;
+  border-radius: 3px;
+  font-size: 15px;
+}
+
+.navbar-newsletter a {
+  text-decoration: none;
+  color: #202323;
+}
+
+.navbar-support {
+  position: relative;
+  bottom: 85px;
+  display: inline-block;
+  width: 40%;
+  margin-left: 20px;
+}
+
+.navbar-support h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.navbar-support ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar-support li {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+#hamburger-menu:checked ~ nav {
+  /*show nav*/
+  display: block;
+  transform: translatex(-30px);
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.searchbox {
+  width: 60%;
+  height: 28px;
+  border: #202323 solid 1px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.searchbox input {
+  padding-left: 0%;
+  width: 85%;
+  border: none;
+  height: 75%;
+  margin: 2px;
+}
+
+.search-bar img {
+  margin-left: 2px;
+}
+
+.search-bar {
+  margin-top: 11px;
+  margin-bottom: 11px;
+}
+
+.ship-info {
+  width: 100%;
+  text-align: center;
+  font-size: 0.7em;
+  background-color: #202323;
+  color: whitesmoke;
+  height: 25px;
+  bottom: 0;
+  position: sticky;
+}
+
+.ship-info p {
+  margin: 0;
+  padding: 6px;
+  word-wrap: break-word;
+}
+
+.herobanner {
+  width: 100%;
+  height: 498px;
+  color: white;
+}
+
+.bg-walkers {
+  background-image: url(../images/HeroBanner.jpg);
+  height: 498px;
+  background-size: cover;
+  background-position: -400px 0;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.desktop-jacket-container {
+  display: none;
+}
+
+.desktop-jacket {
+  display: none;
+}
+
+.herobanner h2 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.herobanner p {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 2px;
+}
+
+.herobanner-content {
+  position: relative;
+  top: 30%;
+  margin-left: 5%;
+}
+
+.herobanner button {
+  background-color: #202323;
+  border: none;
+  color: white;
+  width: 166px;
+  height: 44px;
+  margin-top: 11px;
+  cursor: pointer;
+}
+
+.herobanner button a {
+  color: #f3f3f3;
+  text-decoration: none;
+}
+
+.popular-products h2 {
+  margin-top: 38px;
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.popular-products {
+  width: 100%;
+}
+
+.product-container {
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+  overflow-x: auto;
+  height: 400px;
+  margin-top: 23px;
+}
+
+.item-box {
+  min-width: 228px;
+  height: 373px;
+  margin-right: 20px;
+}
+
+.product-picture {
+  max-width: 228px;
+  max-height: 208px;
+  display: flex;
+  justify-content: center;
+}
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.colors button {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px 5px 5px 10px;
+  cursor: pointer;
+}
+
+.button-green {
+  background-color: #727768;
+}
+.button-red {
+  background-color: #fe8d1d;
+}
+.button-grey {
+  background-color: #d4d4d4;
+}
+.button-brown {
+  background-color: #765619;
+}
+.button-yellow {
+  background-color: #ca9700;
+}
+.button-black {
+  background-color: black;
+}
+.product-info h3 {
+  margin: 0 0 0 0px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ratings {
+  margin-left: 0px;
+}
+
+.fa-star {
+  font-size: 12px;
+  color: #cc8316;
+  margin-left: 0px;
+}
+
+.product-info p {
+  margin: 3px 0 0 2px;
+}
+
+.select-size button {
+  margin-left: 5px;
+  margin-top: 3px;
+  border-radius: 2px;
+  border: solid black 1px;
+  width: 25px;
+  height: 25px;
+  padding: 0px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.select-size a {
+  text-decoration: none;
+  color: #202323;
+}
+
+.select-size :nth-child(1) {
+  margin-left: 0px;
+}
+.add-to-cart button {
+  width: 100%;
+  height: 36px;
+  background-color: #012340;
+  border: none;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.add-to-cart a {
+  text-decoration: none;
+  color: #f3f3f3;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.image-slider {
+  display: flex;
+  justify-content: center;
+}
+
+.hiking-image-container {
+  margin-top: 70px;
+  height: 400px;
+  width: 100%;
+  background-image: url(../images/findyouradventurebanner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hiking-image-container h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  flex-wrap: nowrap;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hiking-content-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hiking-content-bottom h3 {
+  margin-left: 10px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hiking-content-bottom button {
+  background-color: rgba(196, 196, 196, 0.5);
+  border: none;
+  border-radius: 10px 0 0 0;
+  width: 18%;
+  height: 50px;
+  color: #f3f3f3;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.casual-image-container {
+  height: 300px;
+  width: 100%;
+  background-image: url(../images/herobannercasual.jpg);
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-top: 70px;
+  cursor: pointer;
+}
+
+.casual-content-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.casual-content-bottom h3 {
+  margin-left: 10px;
+  margin-top: 0;
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 0;
+  color: #202323;
+}
+
+.casual-content-bottom button {
+  background-color: rgba(196, 196, 196, 0.5);
+  border: none;
+  border-radius: 10px 0 0 0;
+  width: 18%;
+  height: 50px;
+  color: #202323;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.ski-image-container {
+  margin-top: 70px;
+  height: 300px;
+  width: 100%;
+  background-image: url(../images/jack-atkinson-ijY8qAk2WKE-unsplash-kopi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.ski-content-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ski-content-bottom h3 {
+  margin-left: 10px;
+  margin-top: 0;
+  font-size: 2em;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: #f3f3ff;
+  text-transform: uppercase;
+}
+
+.ski-content-bottom button {
+  background-color: rgba(196, 196, 196, 0.5);
+  border: none;
+  border-radius: 10px 0 0 0;
+  width: 18%;
+  height: 50px;
+  color: #f3f3f3;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.rainjacket-image-container {
+  margin-top: 70px;
+  height: 300px;
+  width: 100%;
+  background-image: url(../images/rainjacketherobanner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.rainjacket-content-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rainjacket-content-bottom h3 {
+  margin-left: 10px;
+  margin-top: 0;
+  font-size: 2em;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: #f3f3ff;
+  text-transform: uppercase;
+}
+
+.rainjacket-content-bottom button {
+  background-color: rgba(196, 196, 196, 0.5);
+  border: none;
+  border-radius: 10px 0 0 0;
+  width: 18%;
+  height: 50px;
+  color: #f3f3f3;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.new-arrivals {
+  background-image: url(../images/new-arrivals.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+  height: 350px;
+}
+.new-arrivals h2 {
+  font-size: 2.2em;
+  text-align: center;
+  padding-top: 50px;
+  font-weight: 400;
+}
+
+.new-arrival-button {
+  display: flex;
+  justify-content: center;
+}
+
+.new-arrivals button {
+  width: 150px;
+  height: 30px;
+  background-color: rgba(40, 41, 41, 0.9);
+  color: #f3f3f3;
+  text-transform: uppercase;
+  border-radius: 3px;
+  border: none;
+}
+
+.footer-info {
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+.shipping {
+  display: flex;
+  align-items: center;
+}
+
+.shipping i {
+  display: inline-block;
+  font-size: 22px;
+}
+
+.shipping-text {
+  display: inline-block;
+  width: 60%;
   margin-left: 5px;
 }
-
-.cart a {
-  text-decoration: none;
-  color: black;
+.shipping-text h4 {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
 }
-
-.cart p {
-  margin: 0 0 0 3px;
-  padding: 0px;
+.shipping-text p {
+  margin: 0px;
   font-size: 11px;
 }
 
-h3 {
-  color: purple;
+.delivery {
+  display: flex;
+  align-items: center;
 }
 
-#heipådeg {
-  color: black;
+.delivery-text {
+  margin-left: 5px;
+}
+
+.delivery i {
+  font-size: 22px;
+}
+
+.delivery-text h4 {
+  font-weight: 500;
+  font-size: 12px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+.delivery-text p {
+  margin-top: 0px;
+  font-size: 11px;
+}
+
+.return {
+  display: flex;
+  align-items: center;
+}
+
+.return-text {
+  margin-left: 5px;
+}
+.return i {
+  font-size: 22px;
+  padding-top: 5px;
+}
+
+.return-text h4 {
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 12px;
+}
+.return-text p {
+  font-size: 11px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.secure-payments {
+  margin-left: 10px;
+}
+
+.secure-payments h2 {
+  margin-bottom: 0px;
+  font-size: 1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+.footer-socialmedia {
+  display: inline-block;
+  margin-left: 10px;
+  width: 50%;
+}
+
+.footer-socialmedia h2 {
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-socialmedia img {
+  height: 20px;
+  width: 30px;
+}
+
+.footer-newsletter {
+  position: relative;
+  bottom: 60px;
+  display: inline-block;
+  margin-left: 10px;
+  width: 50%;
+}
+
+.footer-newsletter h2 {
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.footer-newsletter p {
+  font-size: 0.8em;
+  margin-top: 0px;
+}
+
+.footer-newsletter button {
+  background-color: #cc8316;
+  border: none;
+  width: 125px;
+  height: 25px;
+  border-radius: 3px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.footer-newsletter a {
+  text-decoration: none;
+  color: #202323;
+}
+
+.footer-support {
+  position: relative;
+  bottom: 85px;
+  display: inline-block;
+  width: 40%;
+  margin-left: 20px;
+}
+
+.footer-support h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.footer-support ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-support li {
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.explore {
+  display: none;
+  width: 25%;
+  margin-top: 20px;
+}
+
+.explore ul {
+  list-style: none;
+  padding: 0px;
+  margin-top: 0px;
+}
+.explore li {
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.explore h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.footer {
+  background-color: #202323;
+  color: #f3f3f3;
+}
+
+@media screen and (max-width: 361px) {
+  .herobanner-content h2 {
+    font-size: 1.4em;
+  }
+
+  .ship-info p {
+    font-size: 0.8em;
+  }
+
+  .hiking-image-container h2 {
+    font-size: 20px;
+  }
+
+  .hiking-content-bottom h3 {
+    font-size: 1.5em;
+  }
+  .shipping-text p {
+    font-size: 0.8em;
+  }
+  .delivery-text p {
+    font-size: 0.8em;
+  }
+  .return-text p {
+    font-size: 0.8em;
+  }
+
+  .footer-support {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .footer-support {
+    width: 30%;
+  }
+
+  .footer-newsletter {
+    width: 60%;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 630px) {
+  .bg-walkers {
+    background-position: -250px 0;
+  }
+
+  .ship-info p {
+    font-size: 12px;
+  }
+
+  .herobanner-content h2 {
+    font-size: 2em;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer-socialmedia {
+    margin-top: 20px;
+    width: 30%;
+  }
+
+  .footer-socialmedia h2 {
+    margin-top: 0;
+    padding-top: 0px;
+  }
+
+  .footer-newsletter {
+    width: 30%;
+    bottom: 0px;
+    margin-top: 20px;
+  }
+  .footer-newsletter h2 {
+    margin-top: 0px;
+  }
+
+  .footer-support {
+    bottom: 0px;
+    margin-top: 20px;
+    width: 30%;
+  }
+  .footer-support h2 {
+    padding-top: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .footer-support ul {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .mobile-navigation-and-searchbar {
+    display: none;
+  }
+
+  .inner {
+    max-width: 987px;
+    margin: 0 auto;
+  }
+
+  .desktop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .desktop-nav ul {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  .desktop-nav li {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .desktop-nav ul :nth-child(5) {
+    display: none;
+  }
+  .desktop-nav ul :nth-child(4) {
+    display: none;
+  }
+
+  .desktop-searchbox {
+    border: 1px solid #202323;
+    border-radius: 5px;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .desktop-searchbox img {
+    margin: 1px;
+  }
+  .desktop-searchbox input {
+    width: 85%;
+    border: none;
+  }
+
+  .desktop-account {
+    display: inline-block;
+  }
+
+  .desktop-account img {
+    margin: 5px 5px 0px 8px;
+  }
+
+  .desktop-account p {
+    font-size: 10px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .desktop-cart {
+    display: inline-block;
+  }
+
+  .desktop-cart img {
+    margin: 5px 5px 0 5px;
+  }
+
+  .desktop-cart p {
+    text-transform: uppercase;
+    margin: 0px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .bg-walkers {
+    background-image: url(../images/HeroBanner.jpg);
+    height: 550px;
+    background-size: cover;
+    background-position: -100px 0;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .desktop-jacket-container {
+    display: block;
+    margin-top: 50px;
+    background-image: url(../images/findyouradventurebanner.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -80px;
+    margin-bottom: 20px;
+  }
+
+  .desktop-jacket-container h2 {
+    text-align: center;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    font-weight: 400;
+  }
+
+  .desktop-jacket {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .desktop-jacket button {
+    width: 165px;
+    height: 45px;
+    border: none;
+    border-radius: 2px;
+    background-color: rgba(40, 41, 41, 0.9);
+    color: #f3f3f3;
+  }
+
+  .new-arrivals {
+    display: none;
+  }
+
+  .hiking-outdoor-container {
+    display: none;
+  }
+  .casual-outdoor-container {
+    display: none;
+  }
+  .ski-container {
+    display: none;
+  }
+  .rainjacket-container {
+    display: none;
+  }
+
+  .footer-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .explore {
+    display: block;
+  }
+
+  .footer-socialmedia {
+    width: 25%;
+  }
+
+  .footer-newsletter {
+    width: 25%;
+  }
+  .footer-support {
+    width: 25%;
+  }
+}
+
+@media screen and (min-width: 1001px) {
+  .mobile-navigation-and-searchbar {
+    display: none;
+  }
+
+  .inner {
+    max-width: 987px;
+    margin: 0 auto;
+  }
+
+  .desktop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .desktop-nav ul {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  .desktop-nav li {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .desktop-searchbox {
+    border: 1px solid #202323;
+    border-radius: 5px;
+    width: 250px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .desktop-searchbox img {
+    margin: 1px;
+  }
+  .desktop-searchbox input {
+    width: 85%;
+    border: none;
+    padding-left: 40px;
+  }
+
+  .desktop-account {
+    display: inline-block;
+  }
+
+  .desktop-account img {
+    margin: 5px 5px 0px 8px;
+  }
+
+  .desktop-account p {
+    font-size: 10px;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .desktop-cart {
+    display: inline-block;
+  }
+
+  .desktop-cart img {
+    margin: 5px 5px 0 5px;
+  }
+
+  .desktop-cart p {
+    text-transform: uppercase;
+    margin: 0px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .bg-walkers {
+    background-image: url(../images/HeroBanner.jpg);
+    height: 600px;
+    background-size: cover;
+    background-position: 0 0;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .hiking-outdoor-container {
+    display: none;
+  }
+  .casual-outdoor-container {
+    display: none;
+  }
+  .ski-container {
+    display: none;
+  }
+  .rainjacket-container {
+    display: none;
+  }
+
+  .footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .new-arrivals {
+    display: none;
+  }
+
+  .desktop-jacket-container {
+    display: block;
+    margin-top: 50px;
+    background-image: url(../images/findyouradventurebanner.jpg);
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -80px;
+    margin-bottom: 20px;
+  }
+
+  .desktop-jacket-container h2 {
+    text-align: center;
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-size: 1.7em;
+    font-weight: 400;
+  }
+
+  .desktop-jacket {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .desktop-jacket button {
+    width: 165px;
+    height: 45px;
+    border: none;
+    border-radius: 2px;
+    background-color: rgba(40, 41, 41, 0.9);
+    color: #f3f3f3;
+  }
 }

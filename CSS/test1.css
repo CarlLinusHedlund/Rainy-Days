@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  background: #f3f3f3;
+  width: auto;
+  font-family: "Rubik", sans-serif;
+}
+
+header {
+  height: 112px;
+}
